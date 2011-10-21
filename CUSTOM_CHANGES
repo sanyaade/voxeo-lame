@@ -1,0 +1,24 @@
+// This file contains description of changes that were added 
+// to original LAME sources.
+
+
+#### lame-398-2
+
+1) Changed Runtime to Multi-threaded (Debug) DLL
+   Changed files: libmp3lame_vc8.vcproj, mpglib_vc8.vcproj, 
+                  LameDll_vc8.vcproj, lame_vc8.vcproj
+
+2) Added API which uses context instead of static state variable.
+   Changed files: 
+         include\lame.h 
+         libmp3lame\mpglib_interface.c
+         mpglib\interface.h
+         mpglib\interface.c
+
+3) Moved III_sideinfo to struct mpstr_tag. 
+   Added outbuffer to struct mpstr_tag.
+   Changed files: 
+         libmp3lame\mpglib_interface.c
+         mpglib\mpglib.h
+         mpglib\layer3.c
+   
